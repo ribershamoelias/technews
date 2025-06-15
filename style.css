@@ -20,6 +20,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--font-sans);
     background-color: var(--bg-dark);
@@ -29,7 +33,8 @@ body {
 
 /* --- HEADER & NAVIGATION --- */
 .site-header {
-    background-color: var(--bg-light);
+    background-color: rgba(30, 41, 59, 0.8);
+    backdrop-filter: blur(8px);
     padding: 1rem 2rem;
     display: flex;
     align-items: center;
@@ -38,8 +43,6 @@ body {
     position: sticky;
     top: 0;
     z-index: 100;
-    backdrop-filter: blur(8px); /* Cooler Glas-Effekt */
-    background-color: rgba(30, 41, 59, 0.8);
 }
 
 .logo-link {
@@ -79,7 +82,7 @@ body {
     color: var(--bg-dark);
 }
 
-.mobile-nav-toggle { display: none; } /* Standardmäßig versteckt */
+.mobile-nav-toggle { display: none; }
 
 /* --- HERO SECTION --- */
 .hero {
@@ -87,6 +90,8 @@ body {
     grid-template-columns: 2fr 1fr;
     gap: 2rem;
     padding: 3rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .hero-main-article {
@@ -114,7 +119,7 @@ body {
 .article-excerpt {
     font-size: 1.1rem;
     color: var(--text-secondary);
-    max-width: 65ch; /* Verbessert Lesbarkeit */
+    max-width: 65ch;
     margin-bottom: 2rem;
 }
 
@@ -158,8 +163,12 @@ body {
 }
 
 /* --- CONTENT GRID & CARDS --- */
+.content-grid-wrapper {
+    padding: 2rem 0;
+}
+
 .content-grid {
-    padding: 2rem;
+    padding: 0 2rem;
     max-width: 1400px;
     margin: auto;
     display: grid;
@@ -170,7 +179,7 @@ body {
 .card-link {
     text-decoration: none;
     color: inherit;
-    display: block; /* Damit der Link den Raum füllt */
+    display: block;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .card-link:hover {
@@ -205,7 +214,7 @@ body {
 .card p {
     color: var(--text-secondary);
     font-size: 0.95rem;
-    flex-grow: 1; /* Schiebt Metadaten nach unten */
+    flex-grow: 1;
     margin-bottom: 1rem;
 }
 
@@ -214,20 +223,16 @@ body {
     color: var(--text-secondary);
     border-top: 1px solid var(--border-color);
     padding-top: 1rem;
-    margin-top: auto; /* Haftet am unteren Rand */
+    margin-top: auto;
 }
 
-/* --- SPEZIAL: PRODUKT-KARTE --- */
+/* SPEZIAL: PRODUKT-KARTE */
 .card-product {
     border-color: var(--accent-color);
-    position: relative;
-    overflow: hidden;
 }
-
 .card-product .card-category { color: var(--accent-color); }
-
 .product-image {
-    margin: -1.5rem -1.5rem 1rem -1.5rem; /* Negativer Margin, um Bild an Kanten zu ziehen */
+    margin: -1.5rem -1.5rem 1rem -1.5rem;
     height: 180px;
     overflow: hidden;
 }
@@ -236,20 +241,17 @@ body {
     height: 100%;
     object-fit: cover;
 }
-
 .product-call-to-action {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 1rem;
 }
-
 .product-price {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--text-primary);
 }
-
 .btn-affiliate {
     background-color: var(--accent-color);
     color: var(--bg-dark);
@@ -260,7 +262,7 @@ body {
 
 /* --- FOOTER --- */
 .site-footer {
-    background-color: #0c1424; /* Noch dunkler für klaren Abschluss */
+    background-color: #0c1424;
     padding: 3rem 2rem 1rem;
     color: var(--text-secondary);
     font-size: 0.9rem;
@@ -299,7 +301,9 @@ body {
 .affiliate-notice { font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.7; }
 
 
-/* --- RESPONSIVITÄT --- */
+/* --- RESPONSIVITÄT & MOBILE ANPASSUNGEN --- */
+
+/* Für Tablets */
 @media (max-width: 992px) {
     .hero { grid-template-columns: 1fr; }
     .sidebar { margin-top: 2rem; flex-direction: row; flex-wrap: wrap; }
@@ -307,9 +311,10 @@ body {
     .hero-main-article h1 { font-size: 2.2rem; }
 }
 
+/* Für Mobilgeräte */
 @media (max-width: 768px) {
     .site-header { padding: 1rem; }
-    .main-nav { display: none; } /* Navigation für Mobile ausblenden */
+    .main-nav { display: none; }
     .mobile-nav-toggle {
         display: block;
         background: none;
@@ -318,8 +323,38 @@ body {
         font-size: 1.8rem;
         cursor: pointer;
     }
+
+    .hero { padding: 2rem 1.5rem; }
     .sidebar { flex-direction: column; }
     .sidebar-article { flex-basis: 100%; }
-    .content-grid { grid-template-columns: 1fr; padding: 1.5rem; }
     .footer-content { grid-template-columns: 1fr; }
+
+    /* Horizontales Scrolling für die Karten */
+    .content-grid-wrapper { padding: 1.5rem 0; }
+    
+    .content-grid {
+        grid-template-columns: 1fr; /* Fallback für Browser ohne Flexbox-Gap */
+        display: flex;
+        overflow-x: auto;
+        gap: 1rem;
+        
+        /* Padding links & rechts, damit die Karten nicht am Rand kleben */
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        
+        /* Snap-Verhalten für App-ähnliches Gefühl */
+        scroll-snap-type: x mandatory;
+        
+        /* Scrollbar ausblenden */
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE/Edge */
+    }
+    .content-grid::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+    }
+
+    .card-link {
+        flex: 0 0 85%; /* Karte nimmt 85% der Breite ein */
+        scroll-snap-align: start; /* Karte rastet am Anfang ein */
+    }
 }
