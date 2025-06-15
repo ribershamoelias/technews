@@ -1,140 +1,164 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>TechPulse – News & Analysen von RSE Systems</title>
-    <link rel="icon" href="favicon-32x32.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TechNews – by RSE Systems</title>
+
+  <!-- Favicon & Fonts -->
+  <link rel="icon" href="favicon-32x32.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <header class="site-header">
-        <a href="#" class="logo-link">
-            <img src="RSESystems_Logo.png" alt="RSE Systems Logo">
-            <span>TechPulse</span> 
-        </a>
-        <nav class="main-nav">
-            <a href="#">News</a>
-            <a href="#">Reviews</a>
-            <a href="#">Deals</a>
-            <a href="#">Wissen</a>
-            <a href="#" class="nav-contact">Kontakt</a>
-        </nav>
-        <button class="mobile-nav-toggle" aria-label="Menü öffnen">☰</button>
-    </header>
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <a href="#" class="logo-link">
+      <img src="assets/logo.png" alt="RSE Systems Logo" />
+      <span>TechNews</span>
+    </a>
 
-    <main>
-        <section class="hero">
-            <article class="hero-main-article">
-                <span class="article-category">Zukunft der KI</span>
-                <h1>KI als Co-Pilot: Wie künstliche Intelligenz unsere Arbeitswelt revolutioniert</h1>
-                <p class="article-excerpt">Von GPT-5 über Edge AI bis zu autonomen Agenten – wir analysieren die größten Disruptionen, die in den nächsten 24 Monaten auf Unternehmen zukommen.</p>
-                <a href="#" class="btn">Zum Artikel</a>
-            </article>
-            
-            <aside class="sidebar">
-                <article class="sidebar-article">
-                    <a href="#">
-                        <h3>Apples "Vision Pro 2": Gerüchte um günstigeres Modell</h3>
-                    </a>
-                </article>
-                <article class="sidebar-article">
-                    <a href="#">
-                        <h3>EU AI Act 2025: Was deutsche Unternehmen jetzt wissen müssen</h3>
-                    </a>
-                </article>
-                 <article class="sidebar-article">
-                    <a href="#">
-                        <h3>Quantencomputing: Der Durchbruch rückt näher</h3>
-                    </a>
-                </article>
-            </aside>
-        </section>
+    <!-- Desktop-Navigation -->
+    <nav class="main-nav">
+      <a href="#">News</a>
+      <a href="#">Reviews</a>
+      <a href="#">Deals</a>
+      <a href="#">Wissen</a>
+      <a href="#" class="nav-contact">Kontakt</a>
+    </nav>
 
-        <section class="content-grid">
-            <a href="#" class="card-link">
-                <article class="card">
-                    <span class="card-category">Raumfahrt</span>
-                    <h2>SpaceX plant dediziertes KI-Satellitennetzwerk</h2>
-                    <p>Machine Learning im Orbit: Wie Starlink die globale Datenverarbeitung dezentralisieren und beschleunigen könnte.</p>
-                    <div class="card-meta">
-                        <span>Lesezeit: 4 Min.</span>
-                    </div>
-                </article>
-            </a>
+    <!-- Hamburger -->
+    <button class="mobile-nav-toggle" aria-label="Menü öffnen" aria-expanded="false">☰</button>
+  </header>
 
-            <a href="#" class="card-link">
-                <article class="card">
-                    <span class="card-category">Analyse</span>
-                    <h2>Was die ersten GPT-5 Leaks wirklich bedeuten</h2>
-                    <p>Die Gerüchteküche brodelt. Wir trennen Fakten von Fiktion und analysieren die möglichen Auswirkungen auf die Tech-Industrie.</p>
-                    <div class="card-meta">
-                        <span>Von Dr. Eva Schmidt</span>
-                    </div>
-                </article>
-            </a>
+  <!-- ===== HERO + SIDEBAR ===== -->
+  <main>
+    <section class="hero">
+      <!-- Aufmacher -->
+      <article class="hero-main-article">
+        <span class="article-category">Zukunft der KI</span>
+        <h1>KI als Co-Pilot: Wie künstliche Intelligenz unsere Arbeitswelt revolutioniert</h1>
+        <p class="article-excerpt">
+          Von GPT-5 über Edge-AI bis zu autonomen Agenten – wir analysieren die größten Disruptionen,
+          die in den nächsten 24 Monaten auf Unternehmen zukommen.
+        </p>
+        <a href="#" class="btn">Zum Artikel</a>
+      </article>
 
-            <a href="affiliate-link-hier" class="card-link" target="_blank" rel="noopener sponsored">
-                <article class="card card-product">
-                    <span class="card-category">Top-Deal</span>
-                    <figure class="product-image">
-                        <img src="placeholder_ssd.jpg" alt="Samsung 990 Pro SSD">
-                    </figure>
-                    <h2>Deal: Samsung 990 Pro NVMe SSD (2TB)</h2>
-                    <p>Ideal für Entwickler & Gamer. Aktuell zum Bestpreis erhältlich.</p>
-                    <div class="product-call-to-action">
-                        <span class="product-price">149,99 €</span>
-                        <span class="btn-affiliate">Zum Angebot →</span>
-                    </div>
-                </article>
-            </a>
-            
-            <a href="#" class="card-link">
-                <article class="card">
-                    <span class="card-category">Software</span>
-                    <h2>Android 16: Die wichtigsten Neuerungen im Überblick</h2>
-                    <p>Die erste Beta-Version legt den Fokus auf verbesserte Performance, tiefere KI-Integration und neue Sicherheitsfeatures.</p>
-                     <div class="card-meta">
-                        <span>Update vom 15.06.2025</span>
-                    </div>
-                </article>
-            </a>
+      <!-- Top-Stories als horizontale Scroll-Leiste -->
+      <aside class="sidebar h-scroll">
+        <article class="sidebar-article">
+          <a href="#"><h3>Apples „Vision Pro 2”: Gerüchte um günstigeres Modell</h3></a>
+        </article>
+        <article class="sidebar-article">
+          <a href="#"><h3>EU AI Act 2025: Was deutsche Unternehmen jetzt wissen müssen</h3></a>
+        </article>
+        <article class="sidebar-article">
+          <a href="#"><h3>Quantencomputing: Der Durchbruch rückt näher</h3></a>
+        </article>
+      </aside>
+    </section>
 
-        </section>
-    </main>
+    <!-- ===== KARTEN-GRID / HORIZONTAL AUF MOBILE ===== -->
+    <section class="content-grid h-scroll">
+      <!-- Karte 1 -->
+      <a href="#" class="card-link">
+        <article class="card">
+          <span class="card-category">Raumfahrt</span>
+          <h2>SpaceX plant dediziertes KI-Satellitennetzwerk</h2>
+          <p>Machine Learning im Orbit: Wie Starlink die globale Daten­verarbeitung dezentralisieren und beschleunigen könnte.</p>
+          <div class="card-meta">Lesezeit: 4 Min.</div>
+        </article>
+      </a>
 
-    <footer class="site-footer">
-        <div class="footer-content">
-            <div class="footer-about">
-                <h4>Über TechPulse by RSE Systems</h4>
-                <p>Unabhängige News, fundierte Analysen und ehrliche Reviews aus der Welt der Technologie und Wissenschaft.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#">Über uns</a></li>
-                    <li><a href="#">Team</a></li>
-                    <li><a href="#">Werbung & Affiliate</a></li>
-                    <li><a href="#">Presse</a></li>
-                </ul>
-            </div>
-            <div class="footer-legal">
-                 <h4>Rechtliches</h4>
-                 <ul>
-                    <li><a href="#">Impressum</a></li>
-                    <li><a href="#">Datenschutz</a></li>
-                    <li><a href="#">Cookie-Einstellungen</a></li>
-                 </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-             <p>&copy; 2025 RSE Systems. Alle Rechte vorbehalten.</p>
-             <p class="affiliate-notice">Hinweis: Einige Links auf dieser Seite sind Affiliate-Links. Bei einem Kauf erhalten wir eine Provision ohne zusätzliche Kosten für dich.</p>
-        </div>
-    </footer>
+      <!-- Karte 2 -->
+      <a href="#" class="card-link">
+        <article class="card">
+          <span class="card-category">Analyse</span>
+          <h2>Was die ersten GPT-5 Leaks wirklich bedeuten</h2>
+          <p>Wir trennen Fakten von Fiktion und analysieren die möglichen Auswirkungen auf die Tech-Industrie.</p>
+          <div class="card-meta">Von Dr. Eva Schmidt</div>
+        </article>
+      </a>
 
+      <!-- Produkt-Karte -->
+      <a href="https://example-affiliate-link" class="card-link" target="_blank" rel="noopener sponsored">
+        <article class="card card-product">
+          <span class="card-category">Top-Deal</span>
+          <figure class="product-image">
+            <img src="assets/placeholder_ssd.jpg" alt="Samsung 990 Pro SSD" />
+          </figure>
+          <h2>Deal: Samsung 990 Pro NVMe SSD (2 TB)</h2>
+          <p>Ideal für Entwickler & Gamer – aktuell zum Bestpreis erhältlich.</p>
+          <div class="product-call-to-action">
+            <span class="product-price">149,99 €</span>
+            <span class="btn-affiliate">Zum Angebot →</span>
+          </div>
+        </article>
+      </a>
+
+      <!-- Karte 4 -->
+      <a href="#" class="card-link">
+        <article class="card">
+          <span class="card-category">Software</span>
+          <h2>Android 16: Die wichtigsten Neuerungen im Überblick</h2>
+          <p>Die erste Beta legt den Fokus auf Performance, KI-Integration und Sicherheit.</p>
+          <div class="card-meta">Update: 15.06.2025</div>
+        </article>
+      </a>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-about">
+        <h4>Über TechNews</h4>
+        <p>Unabhängige News, fundierte Analysen und ehrliche Reviews aus der Welt der Technologie – kuratiert von RSE Systems.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Über uns</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Werbung & Affiliate</a></li>
+          <li><a href="#">Presse</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-legal">
+        <h4>Rechtliches</h4>
+        <ul>
+          <li><a href="#">Impressum</a></li>
+          <li><a href="#">Datenschutz</a></li>
+          <li><a href="#">Cookie-Einstellungen</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 RSE Systems. Alle Rechte vorbehalten.</p>
+      <p class="affiliate-notice">*Hinweis:* Einige Links sind Affiliate-Links. Beim Kauf erhalten wir eine Provision, ohne dass dir Mehrkosten entstehen.</p>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPT: Hamburger-Navigation ===== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.querySelector('.mobile-nav-toggle');
+      const nav    = document.querySelector('.main-nav');
+      const body   = document.body;
+
+      toggle.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open);
+        body.style.overflowY = open ? 'hidden' : '';
+      });
+    });
+  </script>
 </body>
 </html>
