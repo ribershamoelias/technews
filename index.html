@@ -5,11 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TechNews – by RSE Systems</title>
 
-  <!-- Favicon & Fonts -->
+  <!-- Favicon & Google-Font -->
   <link rel="icon" href="favicon-32x32.png" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -21,7 +20,6 @@
       <span>TechNews</span>
     </a>
 
-    <!-- Desktop-Navigation -->
     <nav class="main-nav">
       <a href="#">News</a>
       <a href="#">Reviews</a>
@@ -30,14 +28,12 @@
       <a href="#" class="nav-contact">Kontakt</a>
     </nav>
 
-    <!-- Hamburger -->
     <button class="mobile-nav-toggle" aria-label="Menü öffnen" aria-expanded="false">☰</button>
   </header>
 
-  <!-- ===== HERO + SIDEBAR ===== -->
+  <!-- ===== HERO ===== -->
   <main>
     <section class="hero">
-      <!-- Aufmacher -->
       <article class="hero-main-article">
         <span class="article-category">Zukunft der KI</span>
         <h1>KI als Co-Pilot: Wie künstliche Intelligenz unsere Arbeitswelt revolutioniert</h1>
@@ -48,8 +44,8 @@
         <a href="#" class="btn">Zum Artikel</a>
       </article>
 
-      <!-- Top-Stories als horizontale Scroll-Leiste -->
-      <aside class="sidebar h-scroll">
+      <!-- TOP-STORIES (Desktop rechts, Mobile horizontal) -->
+      <aside class="sidebar">
         <article class="sidebar-article">
           <a href="#"><h3>Apples „Vision Pro 2”: Gerüchte um günstigeres Modell</h3></a>
         </article>
@@ -57,34 +53,34 @@
           <a href="#"><h3>EU AI Act 2025: Was deutsche Unternehmen jetzt wissen müssen</h3></a>
         </article>
         <article class="sidebar-article">
-          <a href="#"><h3>Quantencomputing: Der Durchbruch rückt näher</h3></a>
+          <a href="#"><h3>Quanten­computing: Der Durchbruch rückt näher</h3></a>
         </article>
       </aside>
     </section>
 
-    <!-- ===== KARTEN-GRID / HORIZONTAL AUF MOBILE ===== -->
-    <section class="content-grid h-scroll">
-      <!-- Karte 1 -->
+    <!-- ===== GRID-/SCROLL-CARDS ===== -->
+    <section class="content-grid">
+      <!-- Card 1 -->
       <a href="#" class="card-link">
         <article class="card">
           <span class="card-category">Raumfahrt</span>
           <h2>SpaceX plant dediziertes KI-Satellitennetzwerk</h2>
           <p>Machine Learning im Orbit: Wie Starlink die globale Daten­verarbeitung dezentralisieren und beschleunigen könnte.</p>
-          <div class="card-meta">Lesezeit: 4 Min.</div>
+          <div class="card-meta">Lesezeit 4 Min.</div>
         </article>
       </a>
 
-      <!-- Karte 2 -->
+      <!-- Card 2 -->
       <a href="#" class="card-link">
         <article class="card">
           <span class="card-category">Analyse</span>
-          <h2>Was die ersten GPT-5 Leaks wirklich bedeuten</h2>
+          <h2>Was die ersten GPT-5-Leaks wirklich bedeuten</h2>
           <p>Wir trennen Fakten von Fiktion und analysieren die möglichen Auswirkungen auf die Tech-Industrie.</p>
           <div class="card-meta">Von Dr. Eva Schmidt</div>
         </article>
       </a>
 
-      <!-- Produkt-Karte -->
+      <!-- Produkt-Card -->
       <a href="https://example-affiliate-link" class="card-link" target="_blank" rel="noopener sponsored">
         <article class="card card-product">
           <span class="card-category">Top-Deal</span>
@@ -100,13 +96,13 @@
         </article>
       </a>
 
-      <!-- Karte 4 -->
+      <!-- Card 4 -->
       <a href="#" class="card-link">
         <article class="card">
           <span class="card-category">Software</span>
           <h2>Android 16: Die wichtigsten Neuerungen im Überblick</h2>
           <p>Die erste Beta legt den Fokus auf Performance, KI-Integration und Sicherheit.</p>
-          <div class="card-meta">Update: 15.06.2025</div>
+          <div class="card-meta">Update 15.06.2025</div>
         </article>
       </a>
     </section>
@@ -146,17 +142,15 @@
     </div>
   </footer>
 
-  <!-- ===== SCRIPT: Hamburger-Navigation ===== -->
+  <!-- ===== SCRIPT: Hamburger ===== -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const toggle = document.querySelector('.mobile-nav-toggle');
-      const nav    = document.querySelector('.main-nav');
-      const body   = document.body;
-
-      toggle.addEventListener('click', () => {
+      const btn  = document.querySelector('.mobile-nav-toggle');
+      const nav  = document.querySelector('.main-nav');
+      btn.addEventListener('click', () => {
         const open = nav.classList.toggle('open');
-        toggle.setAttribute('aria-expanded', open);
-        body.style.overflowY = open ? 'hidden' : '';
+        document.body.classList.toggle('nav-open', open);   // Body-Scroll lock
+        btn.setAttribute('aria-expanded', open);
       });
     });
   </script>
