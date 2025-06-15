@@ -312,6 +312,7 @@ body {
 }
 
 /* Für Mobilgeräte */
+/* Für Mobilgeräte */
 @media (max-width: 768px) {
     .site-header { padding: 1rem; }
     .main-nav { display: none; }
@@ -324,37 +325,48 @@ body {
         cursor: pointer;
     }
 
-    .hero { padding: 2rem 1.5rem; }
-    .sidebar { flex-direction: column; }
-    .sidebar-article { flex-basis: 100%; }
+    .hero { padding: 2rem 0; } /* Padding nur oben/unten, da die Container es seitlich haben */
     .footer-content { grid-template-columns: 1fr; }
 
-    /* Horizontales Scrolling für die Karten */
+    /* NEU: Horizontales Scrolling für die Sidebar-Artikel */
+    .sidebar {
+        flex-direction: row; /* Sicherstellen, dass die Richtung horizontal ist */
+        overflow-x: auto; /* Horizontales Scrollen erlauben */
+        gap: 1rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    .sidebar::-webkit-scrollbar {
+        display: none;
+    }
+    .sidebar-article {
+        flex: 0 0 80%; /* Breite der einzelnen Kacheln festlegen */
+        scroll-snap-align: start;
+    }
+
+    /* Horizontales Scrolling für die Haupt-Karten (unverändert) */
     .content-grid-wrapper { padding: 1.5rem 0; }
     
     .content-grid {
-        grid-template-columns: 1fr; /* Fallback für Browser ohne Flexbox-Gap */
+        grid-template-columns: 1fr;
         display: flex;
         overflow-x: auto;
         gap: 1rem;
-        
-        /* Padding links & rechts, damit die Karten nicht am Rand kleben */
         padding-left: 1.5rem;
         padding-right: 1.5rem;
-        
-        /* Snap-Verhalten für App-ähnliches Gefühl */
         scroll-snap-type: x mandatory;
-        
-        /* Scrollbar ausblenden */
-        scrollbar-width: none; /* Firefox */
-        -ms-overflow-style: none; /* IE/Edge */
+        scrollbar-width: none;
+        -ms-overflow-style: none;
     }
     .content-grid::-webkit-scrollbar {
-        display: none; /* Chrome, Safari, Opera */
+        display: none;
     }
 
     .card-link {
-        flex: 0 0 85%; /* Karte nimmt 85% der Breite ein */
-        scroll-snap-align: start; /* Karte rastet am Anfang ein */
+        flex: 0 0 85%;
+        scroll-snap-align: start;
     }
 }
