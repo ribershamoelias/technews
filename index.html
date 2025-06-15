@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TechNews – by RSE Systems</title>
 
-  <!-- Favicon & Google-Font -->
+  <!-- Favicon & Google Font -->
   <link rel="icon" href="favicon-32x32.png" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
@@ -13,25 +13,27 @@
 </head>
 <body>
 
-  <!-- ===== HEADER ===== -->
+  <!-- ===== Header ===== -->
   <header class="site-header">
     <a href="#" class="logo-link">
       <img src="assets/logo.png" alt="RSE Systems Logo" />
       <span>TechNews</span>
     </a>
 
-    <nav class="main-nav">
+    <!-- Hamburger-Button -->
+    <button class="mobile-nav-toggle" aria-label="Menü öffnen" aria-expanded="false">☰</button>
+
+    <!-- Hauptnavigation -->
+    <nav class="main-nav" id="nav">
       <a href="#">News</a>
       <a href="#">Reviews</a>
       <a href="#">Deals</a>
       <a href="#">Wissen</a>
       <a href="#" class="nav-contact">Kontakt</a>
     </nav>
-
-    <button class="mobile-nav-toggle" aria-label="Menü öffnen" aria-expanded="false">☰</button>
   </header>
 
-  <!-- ===== HERO ===== -->
+  <!-- ===== Hero + Sidebar ===== -->
   <main>
     <section class="hero">
       <article class="hero-main-article">
@@ -44,10 +46,10 @@
         <a href="#" class="btn">Zum Artikel</a>
       </article>
 
-      <!-- TOP-STORIES (Desktop rechts, Mobile horizontal) -->
+      <!-- Top-Stories -->
       <aside class="sidebar">
         <article class="sidebar-article">
-          <a href="#"><h3>Apples „Vision Pro 2”: Gerüchte um günstigeres Modell</h3></a>
+          <a href="#"><h3>Apples „Vision Pro 2“: Gerüchte um günstigeres Modell</h3></a>
         </article>
         <article class="sidebar-article">
           <a href="#"><h3>EU AI Act 2025: Was deutsche Unternehmen jetzt wissen müssen</h3></a>
@@ -58,7 +60,7 @@
       </aside>
     </section>
 
-    <!-- ===== GRID-/SCROLL-CARDS ===== -->
+    <!-- ===== Artikel-Kacheln ===== -->
     <section class="content-grid">
       <!-- Card 1 -->
       <a href="#" class="card-link">
@@ -108,7 +110,7 @@
     </section>
   </main>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- ===== Footer ===== -->
   <footer class="site-footer">
     <div class="footer-content">
       <div class="footer-about">
@@ -142,16 +144,26 @@
     </div>
   </footer>
 
-  <!-- ===== SCRIPT: Hamburger ===== -->
+  <!-- ===== Script: Hamburger-Toggle ===== -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const btn  = document.querySelector('.mobile-nav-toggle');
-      const nav  = document.querySelector('.main-nav');
+      const btn   = document.querySelector('.mobile-nav-toggle');
+      const nav   = document.querySelector('.main-nav');
+
       btn.addEventListener('click', () => {
         const open = nav.classList.toggle('open');
-        document.body.classList.toggle('nav-open', open);   // Body-Scroll lock
-        btn.setAttribute('aria-expanded', open);
+        document.body.classList.toggle('nav-open', open);
+        btn.setAttribute('aria-expanded', String(open));
       });
+
+      // Menü schließt, wenn irgendein Link geklickt wird:
+      nav.querySelectorAll('a').forEach(link =>
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          document.body.classList.remove('nav-open');
+          btn.setAttribute('aria-expanded', 'false');
+        })
+      );
     });
   </script>
 </body>
