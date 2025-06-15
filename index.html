@@ -5,26 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TechNews – by RSE Systems</title>
 
-  <!-- Favicon & Google Font -->
-  <link rel="icon" href="favicon-32x32.png" type="image/png" />
+  <!-- Favicon + Google Font -->
+  <link rel="icon" type="image/png" href="favicon-32x32.png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ===== Header ===== -->
+  <!-- ========== HEADER ========== -->
   <header class="site-header">
     <a href="#" class="logo-link">
       <img src="assets/logo.png" alt="RSE Systems Logo" />
       <span>TechNews</span>
     </a>
 
-    <!-- Hamburger-Button -->
-    <button class="mobile-nav-toggle" aria-label="Menü öffnen" aria-expanded="false">☰</button>
+    <!-- Hamburger -->
+    <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
 
-    <!-- Hauptnavigation -->
-    <nav class="main-nav" id="nav">
+    <!-- Navigation -->
+    <nav class="main-nav" id="mainNav">
       <a href="#">News</a>
       <a href="#">Reviews</a>
       <a href="#">Deals</a>
@@ -33,26 +35,26 @@
     </nav>
   </header>
 
-  <!-- ===== Hero + Sidebar ===== -->
+  <!-- ========== HERO & SIDEBAR ========== -->
   <main>
     <section class="hero">
-      <article class="hero-main-article">
+      <article class="hero-main">
         <span class="article-category">Zukunft der KI</span>
         <h1>KI als Co-Pilot: Wie künstliche Intelligenz unsere Arbeitswelt revolutioniert</h1>
         <p class="article-excerpt">
-          Von GPT-5 über Edge-AI bis zu autonomen Agenten – wir analysieren die größten Disruptionen,
-          die in den nächsten 24 Monaten auf Unternehmen zukommen.
+          Von GPT-5 über Edge-AI bis zu autonomen Agenten – wir analysieren die größten
+          Disruptionen, die in den nächsten 24 Monaten auf Unternehmen zukommen.
         </p>
         <a href="#" class="btn">Zum Artikel</a>
       </article>
 
-      <!-- Top-Stories -->
+      <!-- Rechte Top-Stories -->
       <aside class="sidebar">
         <article class="sidebar-article">
           <a href="#"><h3>Apples „Vision Pro 2“: Gerüchte um günstigeres Modell</h3></a>
         </article>
         <article class="sidebar-article">
-          <a href="#"><h3>EU AI Act 2025: Was deutsche Unternehmen jetzt wissen müssen</h3></a>
+          <a href="#"><h3>EU AI Act 2025: Das müssen deutsche Firmen wissen</h3></a>
         </article>
         <article class="sidebar-article">
           <a href="#"><h3>Quanten­computing: Der Durchbruch rückt näher</h3></a>
@@ -60,38 +62,38 @@
       </aside>
     </section>
 
-    <!-- ===== Artikel-Kacheln ===== -->
+    <!-- ========== GRID-CARDS ========== -->
     <section class="content-grid">
       <!-- Card 1 -->
-      <a href="#" class="card-link">
+      <a class="card-link" href="#">
         <article class="card">
           <span class="card-category">Raumfahrt</span>
           <h2>SpaceX plant dediziertes KI-Satellitennetzwerk</h2>
-          <p>Machine Learning im Orbit: Wie Starlink die globale Daten­verarbeitung dezentralisieren und beschleunigen könnte.</p>
+          <p>Machine Learning im Orbit: Wie Starlink globale Daten­verarbeitung beschleunigen könnte.</p>
           <div class="card-meta">Lesezeit 4 Min.</div>
         </article>
       </a>
 
       <!-- Card 2 -->
-      <a href="#" class="card-link">
+      <a class="card-link" href="#">
         <article class="card">
           <span class="card-category">Analyse</span>
           <h2>Was die ersten GPT-5-Leaks wirklich bedeuten</h2>
-          <p>Wir trennen Fakten von Fiktion und analysieren die möglichen Auswirkungen auf die Tech-Industrie.</p>
+          <p>Wir trennen Fakten von Fiktion und analysieren die Auswirkungen auf die Tech-Industrie.</p>
           <div class="card-meta">Von Dr. Eva Schmidt</div>
         </article>
       </a>
 
       <!-- Produkt-Card -->
-      <a href="https://example-affiliate-link" class="card-link" target="_blank" rel="noopener sponsored">
+      <a class="card-link" href="https://example-affiliate" target="_blank" rel="noopener sponsored">
         <article class="card card-product">
           <span class="card-category">Top-Deal</span>
           <figure class="product-image">
             <img src="assets/placeholder_ssd.jpg" alt="Samsung 990 Pro SSD" />
           </figure>
-          <h2>Deal: Samsung 990 Pro NVMe SSD (2 TB)</h2>
-          <p>Ideal für Entwickler & Gamer – aktuell zum Bestpreis erhältlich.</p>
-          <div class="product-call-to-action">
+          <h2>Samsung 990 Pro NVMe SSD (2 TB)</h2>
+          <p>Ideal für Entwickler & Gamer – aktuell zum Bestpreis.</p>
+          <div class="product-cta">
             <span class="product-price">149,99 €</span>
             <span class="btn-affiliate">Zum Angebot →</span>
           </div>
@@ -99,23 +101,23 @@
       </a>
 
       <!-- Card 4 -->
-      <a href="#" class="card-link">
+      <a class="card-link" href="#">
         <article class="card">
           <span class="card-category">Software</span>
-          <h2>Android 16: Die wichtigsten Neuerungen im Überblick</h2>
-          <p>Die erste Beta legt den Fokus auf Performance, KI-Integration und Sicherheit.</p>
+          <h2>Android 16: Die wichtigsten Neuerungen</h2>
+          <p>Die Beta legt den Fokus auf Performance, KI-Integration und Datenschutz.</p>
           <div class="card-meta">Update 15.06.2025</div>
         </article>
       </a>
     </section>
   </main>
 
-  <!-- ===== Footer ===== -->
+  <!-- ========== FOOTER ========== -->
   <footer class="site-footer">
-    <div class="footer-content">
+    <div class="footer-cols">
       <div class="footer-about">
-        <h4>Über TechNews</h4>
-        <p>Unabhängige News, fundierte Analysen und ehrliche Reviews aus der Welt der Technologie – kuratiert von RSE Systems.</p>
+        <h4>Über&nbsp;TechNews</h4>
+        <p>Unabhängige News, fundierte Analysen und ehrliche Reviews – kuratiert von RSE Systems.</p>
       </div>
 
       <div class="footer-links">
@@ -140,29 +142,33 @@
 
     <div class="footer-bottom">
       <p>&copy; 2025 RSE Systems. Alle Rechte vorbehalten.</p>
-      <p class="affiliate-notice">*Hinweis:* Einige Links sind Affiliate-Links. Beim Kauf erhalten wir eine Provision, ohne dass dir Mehrkosten entstehen.</p>
+      <p class="affiliate-note">Einige Links sind Affiliate-Links. Beim Kauf erhalten wir eine Provision, ohne Mehrkosten für dich.</p>
     </div>
   </footer>
 
-  <!-- ===== Script: Hamburger-Toggle ===== -->
+  <!-- ========== SCRIPT: Toggle-Navigation ========== -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const btn   = document.querySelector('.mobile-nav-toggle');
-      const nav   = document.querySelector('.main-nav');
+      const btn  = document.querySelector('.nav-toggle');
+      const nav  = document.getElementById('mainNav');
+      const bars = btn.querySelectorAll('.bar');
 
-      btn.addEventListener('click', () => {
+      const toggleMenu = () => {
         const open = nav.classList.toggle('open');
         document.body.classList.toggle('nav-open', open);
-        btn.setAttribute('aria-expanded', String(open));
-      });
+        btn.setAttribute('aria-expanded', open);
 
-      // Menü schließt, wenn irgendein Link geklickt wird:
+        // Icon Animation (☰ ↔ ✖)
+        bars[0].style.transform = open ? 'rotate(45deg) translateY(7px)' : '';
+        bars[1].style.opacity    = open ? '0'                         : '1';
+        bars[2].style.transform = open ? 'rotate(-45deg) translateY(-7px)' : '';
+      };
+
+      btn.addEventListener('click', toggleMenu);
+
+      // Menü schließt, wenn ein Link geklickt wird
       nav.querySelectorAll('a').forEach(link =>
-        link.addEventListener('click', () => {
-          nav.classList.remove('open');
-          document.body.classList.remove('nav-open');
-          btn.setAttribute('aria-expanded', 'false');
-        })
+        link.addEventListener('click', toggleMenu)
       );
     });
   </script>
