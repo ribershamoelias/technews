@@ -1,0 +1,150 @@
+<!--
+  RSE-Systems | Template-Metadatenblock
+  ─────────────────────────────────────────────────────────────────────────────
+  📄 Dateiname       : tourismus.html
+  📁 Verzeichnis     : /rse-privacysuite/templates/
+  🏷 Template-Typ    : Emotional / Tourismus / Gastfreundschaft
+  🆔 Datei-ID        : RSE-TPL-TOUR-20250705-V1
+  🔓 Sichtbarkeit    : Öffentlich – kann referenziert, aber nicht verändert werden
+
+  📌 Projekt          : Stadt Lichtertal – Tourismusportal DSGVO-konform
+  🌐 Domain           : www.lichtertal-erleben.de
+  👤 Erstellt von     : RSE-Systems (riber@rse-systems.com)
+  📅 Erstellt am      : 05.07.2025
+  ✏️ Letzte Änderung  : 05.07.2025
+  🛠 Geändert durch   : RSE-Systems / Datenschutz & Design Team
+
+  🚦 Status           : In Produktion / Freigegeben durch Projektleitung Lichtertal
+  ✅ Freigabehinweis  : Version 1 nach QS-Freigabe per E-Mail (05.07.2025)
+
+  🔄 Version          : V1
+  📚 Letzte Änderung  : Emotionale Texte für Gäste, angepasst an CI-Farben
+
+  🧩 Aktivierte Module:
+     - PrivacyCore       (Basis-Cookie-Banner mit Consent)
+     - DesignFit         (Design im Stil der Tourismus-Website)
+     - LegalPlus         (Verlinkung zur Datenschutzerklärung)
+
+  ⚙ Technische Hinweise:
+     - Mobil-First Banner (responsive Design mit max. 500 Zeichen Inhalt)
+     - Farbcodierung laut Corporate Design (#ffcc00, #4CAF50, #e57373)
+     - Empfohlene Platzierung: Direkt vor dem schließenden </body>
+     - Keine externen Abhängigkeiten (reines HTML/JS)
+     - Kompatibel mit Chrome, Safari, Firefox, Edge (ab 2021)
+
+  📬 Support-Hinweis:
+     Im Fall von Anzeige- oder Zustimmungsproblemen:  
+     ➤ Bitte kontaktieren Sie support@rse-systems.com unter Angabe der Datei-ID:  
+     `RSE-TPL-TOUR-20250705-V1` sowie Ihrer Domain.
+
+  📌 Änderungsverlauf:
+     [05.07.2025] V1 – Erstveröffentlichung, Text & Farben für Tourismus angepasst
+-->
+
+<!-- RSE Suite Loader -->
+<script src="/rse-privacysuite/core/rse-suite-loader.js"></script>
+
+<!-- MultiLanguage Modul -->
+<script src="/rse-privacysuite/modules/multilanguage.js"></script>
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="/rse-privacysuite/styles/banner.css">
+<link rel="stylesheet" href="/rse-privacysuite/styles/design-tourismus.css">
+
+<div id="rse-cookie-banner" style="position:fixed;bottom:0;width:100%;background:#fffbe6;padding:20px;font-family:'Segoe UI',sans-serif;font-size:15px;color:#444;border-top:2px solid #ffcc00;z-index:9999;">
+  <p style="margin:0 0 10px 0;">
+    🌄 Willkommen in Lichtertal!  
+    Damit Sie unser digitales Erlebnis voll genießen können, verwenden wir Cookies.  
+    <a href="/datenschutz" target="_blank" style="color:#333;text-decoration:underline;">Mehr erfahren</a>
+  </p>
+  <button onclick="rseAcceptCookies()" style="background-color:#4CAF50;color:white;padding:10px 16px;border:none;border-radius:5px;margin-right:10px;">Alles klar!</button>
+  <button onclick="rseDeclineCookies()" style="background-color:#e57373;color:white;padding:10px 16px;border:none;border-radius:5px;">Nein danke</button>
+</div>
+
+<script>
+  function rseAcceptCookies() {
+    localStorage.setItem('rse-consent', 'all');
+    document.getElementById('rse-cookie-banner').style.display = 'none';
+    // Optional: Tracking starten
+  }
+
+  function rseDeclineCookies() {
+    localStorage.setItem('rse-consent', 'essential');
+    document.getElementById('rse-cookie-banner').style.display = 'none';
+  }
+
+  window.onload = function () {
+    if (localStorage.getItem('rse-consent')) {
+      document.getElementById('rse-cookie-banner').style.display = 'none';
+    }
+  };
+</script>
+
+<div id="rse-cookie-banner" style="position:fixed;bottom:0;width:100%;background:#fffbe6;padding:20px;font-family:'Segoe UI',sans-serif;font-size:15px;color:#444;border-top:2px solid #ffcc00;z-index:9999;">
+  <p>
+    Willkommen! Damit Sie unsere Webseite bestmöglich nutzen können, verwenden wir Cookies. 
+    <a href="/datenschutz" target="_blank">Details ansehen</a>.
+  </p>
+  <button onclick="rseAcceptCookies()" style="background-color:#4CAF50;color:white;padding:10px;border:none;border-radius:5px;">Alles klar!</button>
+  <button onclick="rseDeclineCookies()" style="background-color:#e57373;color:white;padding:10px;border:none;border-radius:5px;">Nein danke</button>
+</div>
+
+<script>
+  function rseAcceptCookies() {
+    localStorage.setItem('rse-consent', 'all');
+    document.getElementById('rse-cookie-banner').style.display = 'none';
+  }
+
+  function rseDeclineCookies() {
+    localStorage.setItem('rse-consent', 'essential');
+    document.getElementById('rse-cookie-banner').style.display = 'none';
+  }
+
+  window.onload = function () {
+    if (localStorage.getItem('rse-consent')) {
+      document.getElementById('rse-cookie-banner').style.display = 'none';
+    }
+  };
+</script>
+
+<!-- Opt-in Formular -->
+
+<form class="rse-optin-form" id="newsletter-form">
+  <input type="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
+  <label>
+    <input type="checkbox" name="rse_optin" required>
+    Ich willige ein, Informationen zu Produkten und Angeboten per E-Mail zu erhalten.
+  </label>
+  <button type="submit">Anmelden</button>
+</form>
+
+<!-- Example of embedding a YouTube video -->
+<iframe
+  data-rse-category="media"
+  data-src="https://www.youtube.com/embed/VIDEO_ID"
+  width="560"
+  height="315"
+  frameborder="0"
+  allowfullscreen
+></iframe>
+
+<!-- Design-Konfiguration -->
+<script>
+  window.rseDesignConfig = {
+    primaryColor: "#0a7cff",
+    buttonTextColor: "#ffffff",
+    fontFamily: "'Roboto', sans-serif",
+    borderRadius: "6px"
+  };
+</script>
+
+<!-- Region-Konfiguration -->
+<script>
+  // Legt die Region des Kundenprojekts fest:
+  window.rseRegion = "ch"; // Alternativen: "de", "eu", "us-ca"
+</script>
+
+<!-- QuickScan aktivieren -->
+<script>
+  window.rseEnableQuickScan = true;
+</script>

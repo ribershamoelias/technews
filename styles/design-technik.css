@@ -1,0 +1,28 @@
+/*
+  RSE-Systems | Branchen-Design CSS
+  ───────────────────────────────────────────────
+  📄 Datei        : design-technik.css
+  📁 Pfad         : /rse-privacysuite/styles/
+  🏷 Template-Typ : Technik / IT / Recht / Consulting
+  🆔 Datei-ID     : RSE-DESIGN-TECH-20250705-V1
+
+  Beschreibung:
+  Seriöses, minimalistisches Design für technische Branchen
+*/
+
+#rse-cookie-banner {
+  background-color: #f9f9f9;
+  color: #222;
+  border-top: 2px solid #cccccc;
+  font-size: 14px;
+}
+
+#rse-cookie-banner button.accept {
+  background-color: #2e7d32;
+  color: white;
+}
+
+#rse-cookie-banner button.reject {
+  background-color: #c62828;
+  color: white;
+}

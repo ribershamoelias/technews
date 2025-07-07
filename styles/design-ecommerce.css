@@ -1,0 +1,26 @@
+/*
+  RSE-Systems | Branchen-Design CSS
+  ───────────────────────────────────────────────
+  📄 Datei        : design-ecommerce.css
+  📁 Pfad         : /rse-privacysuite/styles/
+  🏷 Template-Typ : E-Commerce / Onlineshops
+  🆔 Datei-ID     : RSE-DESIGN-ECOM-20250705-V1
+
+  Beschreibung:
+  Klare CTA-Farben und moderne UI-Elemente für Shopsysteme
+*/
+
+#rse-cookie-banner {
+  background-color: #ffffff;
+  border-top: 3px solid #ff6f00;
+}
+
+#rse-cookie-banner button.accept {
+  background-color: #ff6f00;
+  color: #fff;
+}
+
+#rse-cookie-banner button.reject {
+  background-color: #d32f2f;
+  color: #fff;
+}

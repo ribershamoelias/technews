@@ -1,0 +1,31 @@
+/*
+  RSE-Systems | Branchen-Design CSS
+  ───────────────────────────────────────────────
+  📄 Datei        : design-tourismus.css
+  📁 Pfad         : /rse-privacysuite/styles/
+  🏷 Template-Typ : Tourismus / Städte / Hotels
+  🆔 Datei-ID     : RSE-DESIGN-TOUR-20250705-V1
+
+  Beschreibung:
+  Ergänzt das Standard-Banner um warme Farben und freundliche Gestaltung 
+  passend für touristische Zielgruppen.
+*/
+
+#rse-cookie-banner {
+  background-color: #fffbe6;
+  color: #444;
+  border-top: 3px solid #ffcc00;
+}
+
+#rse-cookie-banner button {
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+#rse-cookie-banner button.accept {
+  background-color: #4CAF50;
+}
+
+#rse-cookie-banner button.reject {
+  background-color: #e57373;
+}

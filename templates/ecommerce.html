@@ -1,0 +1,117 @@
+<!--
+  RSE-Systems | Template-Metadatenblock
+  ─────────────────────────────────────────────────────────────────────────────
+  📄 Dateiname       : ecommerce.html
+  📁 Verzeichnis     : /rse-privacysuite/templates/
+  🏷 Template-Typ    : Onlineshop / Handel / Produktseiten
+  🆔 Datei-ID        : RSE-TPL-ECOM-20250705-V1
+  🔓 Sichtbarkeit    : Öffentlich – empfohlen für Shopsysteme
+
+  📌 Projekt          : Glanzstore GmbH – Shopify SEO & DSGVO
+  🌐 Domain           : www.glanzstore.de
+  👤 Erstellt von     : RSE-Systems
+  📅 Erstellt am      : 05.07.2025
+  ✏️ Letzte Änderung  : 05.07.2025
+  🛠 Geändert durch   : RSE-Systems
+
+  🚦 Status           : In Produktion
+  ✅ Freigegeben von  : Glanzstore IT-Team (per Trello-Check 05.07.2025)
+
+  🔄 Version          : V1
+  📚 Letzte Änderung  : Produktoptimierter Hinweistext & UI
+
+  🧩 Aktivierte Module:
+     - PrivacyCore
+     - DesignFit
+     - TrackingControl (Google Analytics 4)
+     - MarketingOptin (Newsletter-Einwilligung)
+
+  ⚙ Technische Hinweise:
+     - Ideal für Produktseiten, kein Platzverlust durch Bottom Banner
+     - Buttonfarben: #ff6f00 (CTA), #d32f2f (Ablehnen)
+     - Getestet in: Shopify, WooCommerce, Shopware
+
+  📬 Support-Hinweis:
+     support@rse-systems.com | Datei-ID bitte angeben: RSE-TPL-ECOM-20250705-V1
+-->
+
+<!-- RSE Suite Loader -->
+<script src="/rse-privacysuite/core/rse-suite-loader.js"></script>
+
+<!-- MultiLanguage Modul -->
+<script src="/rse-privacysuite/modules/multilanguage.js"></script>
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="/rse-privacysuite/styles/banner.css">
+<link rel="stylesheet" href="/rse-privacysuite/styles/design-ecommerce.css">
+
+<div id="rse-cookie-banner" style="position:fixed;bottom:0;width:100%;background:#fff;padding:20px;font-family:Arial,sans-serif;font-size:14px;z-index:9999;border-top:3px solid #ff6f00;">
+  <p style="margin:0 0 10px;">
+    🛒 Damit Ihr Einkauf bei uns sicher und komfortabel ist, verwenden wir Cookies.  
+    <a href="/datenschutz" target="_blank" style="text-decoration:underline;">Details</a>
+  </p>
+  <button onclick="rseAcceptCookies()" style="background-color:#ff6f00;color:white;padding:10px 16px;border:none;border-radius:4px;margin-right:10px;">Zustimmen</button>
+  <button onclick="rseDeclineCookies()" style="background-color:#d32f2f;color:white;padding:10px 16px;border:none;border-radius:4px;">Ablehnen</button>
+</div>
+
+<script>
+  function rseAcceptCookies() {
+    localStorage.setItem('rse-consent', 'all');
+    document.getElementById('rse-cookie-banner').style.display = 'none';
+    // Beispiel: GA4 laden
+    // gtag('consent', 'update', { 'analytics_storage': 'granted' });
+  }
+
+  function rseDeclineCookies() {
+    localStorage.setItem('rse-consent', 'essential');
+    document.getElementById('rse-cookie-banner').style.display = 'none';
+  }
+
+  window.onload = function () {
+    if (localStorage.getItem('rse-consent')) {
+      document.getElementById('rse-cookie-banner').style.display = 'none';
+    }
+  };
+</script>
+
+<!-- Opt-in Formular -->
+
+<form class="rse-optin-form" id="newsletter-form">
+  <input type="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
+  <label>
+    <input type="checkbox" name="rse_optin" required>
+    Ich willige ein, Informationen zu Produkten und Angeboten per E-Mail zu erhalten.
+  </label>
+  <button type="submit">Anmelden</button>
+</form>
+
+<!-- Example of embedding a YouTube video -->
+<iframe
+  data-rse-category="media"
+  data-src="https://www.youtube.com/embed/VIDEO_ID"
+  width="560"
+  height="315"
+  frameborder="0"
+  allowfullscreen
+></iframe>
+
+<!-- Design-Konfiguration -->
+<script>
+  window.rseDesignConfig = {
+    primaryColor: "#0a7cff",
+    buttonTextColor: "#ffffff",
+    fontFamily: "'Roboto', sans-serif",
+    borderRadius: "6px"
+  };
+</script>
+
+<!-- Region-Konfiguration -->
+<script>
+  // Legt die Region des Kundenprojekts fest:
+  window.rseRegion = "ch"; // Alternativen: "de", "eu", "us-ca"
+</script>
+
+<!-- QuickScan aktivieren -->
+<script>
+  window.rseEnableQuickScan = true;
+</script>

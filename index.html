@@ -1,0 +1,81 @@
+<!--
+  ==============================================================================
+  📄 RSE PrivacySuite – Index / Modulübersicht
+  📁 Verzeichnis   : /rse-privacysuite/
+  🆔 Datei-ID      : RSE-INDEX-20250705-V2
+  📅 Erstellt am   : 05.07.2025
+  ✏️ Zuletzt geändert: 05.07.2025 – korrigierte Pfade für lokalen Serverbetrieb
+  🔓 Sichtbarkeit  : Intern (für Entwickler / QA / Kundenberatung)
+  📌 Beschreibung  :
+      Dieses HTML-Dokument dient zur zentralen Vorschau, Demo und Test
+      der eingebundenen RSE-Modules unter realen Browserbedingungen.
+  ==============================================================================
+-->
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>RSE PrivacySuite – Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 🔧 Lokale Stylesheets korrekt referenziert -->
+  <link rel="stylesheet" href="./styles/banner.css">
+  <link rel="stylesheet" href="./styles/design-tourismus.css">
+
+  <!-- 🧠 Konfig-Variablen -->
+  <script>
+    window.rseRegion = "de";
+    window.rseEnableQuickScan = true;
+    window.rseDesignConfig = {
+      primaryColor: "#0044cc",
+      buttonTextColor: "#ffffff",
+      borderRadius: "8px",
+      fontFamily: "Arial, sans-serif"
+    };
+  </script>
+
+  <!-- 📦 Modul-Loader (angepasst für lokale Struktur) -->
+  <script src="./core/rse-suite-loader.js" defer></script>
+</head>
+
+<body style="font-family:sans-serif; padding:2rem; background:#f7f7f7;">
+
+  <h1>🛡️ RSE PrivacySuite – Lokale Vorschau</h1>
+  <p>Dies ist eine vollständige Demo-Umgebung für alle Module der Suite.</p>
+
+  <hr>
+
+  <h2>🍪 Cookie-Banner</h2>
+  <p>Der Banner wird automatisch unten eingeblendet und von Modulen beeinflusst.</p>
+
+  <h2>🧾 Opt-in Formular (Marketing-Modul)</h2>
+  <form class="rse-optin-form" style="background:#fff;padding:1rem;border-radius:8px;max-width:400px;">
+    <input type="email" name="email" placeholder="Ihre E-Mail-Adresse" required style="width:100%;padding:8px;">
+    <br><br>
+    <label style="font-size:0.9rem;">
+      <input type="checkbox" name="rse_optin" required>
+      Ich willige ein, Informationen zu Produkten und Angeboten per E-Mail zu erhalten.
+    </label>
+    <br><br>
+    <button type="submit">Anmelden</button>
+  </form>
+
+  <h2>🎬 Medien (YouTube Platzhalter)</h2>
+  <iframe
+    data-rse-category="media"
+    data-src="https://www.youtube.com/watch?v=oeRuW76dy2I"
+    width="560"
+    height="315"
+    frameborder="0"
+    allowfullscreen>
+  </iframe>
+
+  <h2>🧪 QuickScan (nur in DevTools sichtbar)</h2>
+  <p>Öffne die Konsole und gib ein: <code>RSEQuickScan.export()</code></p>
+
+  <footer style="margin-top:4rem; font-size:0.9rem; color:#888;">
+    &copy; 2025 RSE-Systems – Interne Vorschau für <strong>rse-systems.com</strong>
+  </footer>
+</body>
+</html>

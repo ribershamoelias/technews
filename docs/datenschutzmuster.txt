@@ -1,0 +1,118 @@
+===================================================================================
+  RSE-Systems | Mustertext für Datenschutzerklärung – Einbindung RSE PrivacySuite
+===================================================================================
+📁 Datei: datenschutzmuster.txt
+📅 Erstellt am: 05.07.2025
+🆔 Muster-ID: RSE-DSE-MUSTER-V1
+🔓 Sichtbarkeit: Offen – zur Weitergabe an Kunden & Datenschutzbeauftragte
+
+⚠️ Hinweis:
+Dieser Mustertext stellt eine rechtlich geprüfte Grundlage zur Integration des
+RSE-Consent-Management-Systems dar, ersetzt jedoch keine individuelle rechtliche
+Beratung. Die Inhalte sollten auf Vollständigkeit und Relevanz für Ihr Unternehmen
+überprüft und ggf. angepasst werden.
+
+Rechtsgrundlage kann nur Ihr Vertrag sein. Dies ist nur eine Zusammenfassung (kann Fehler enthalten).
+
+===================================================================================
+1. Verantwortliche Stelle gem. Art. 4 Abs. 7 DSGVO
+-----------------------------------------------------------------------------------
+Verantwortlich für die Datenverarbeitung im Zusammenhang mit dieser Webseite ist:
+
+Unternehmen:        [Firma XYZ GmbH]
+Anschrift:          [Musterstraße 1, 12345 Musterstadt]
+Telefon:            [z. B. +49 123 456789]
+E-Mail:             datenschutz@ihre-domain.de
+Datenschutzbeauftragter: [falls vorhanden, bitte benennen]
+
+===================================================================================
+2. Allgemeine Hinweise zum Einsatz von Cookies
+-----------------------------------------------------------------------------------
+Unsere Webseite verwendet Cookies und vergleichbare Technologien (z. B. LocalStorage),
+um grundlegende Funktionen bereitzustellen, die Website performant zu gestalten und
+ggf. Marketing-, Analyse- oder Personalisierungszwecke umzusetzen.
+
+Cookies sind kleine Textdateien, die im Browser Ihres Endgeräts gespeichert werden.
+Einige dieser Cookies sind technisch notwendig, andere optional und bedürfen Ihrer
+ausdrücklichen Einwilligung.
+
+Die Rechtsgrundlagen für den Einsatz von Cookies sind:
+- Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)
+- Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)
+- Art. 6 Abs. 1 lit. c DSGVO (gesetzliche Verpflichtung)
+
+===================================================================================
+3. Consent Management über RSE PrivacySuite
+-----------------------------------------------------------------------------------
+Zur Verwaltung Ihrer Einwilligungen setzen wir das Consent-Tool „RSE PrivacySuite“ ein,
+bereitgestellt durch:
+
+RSE-Systems GmbH  
+cmp.rse-systems.com  
+Datenspeicherung lokal im Browser (LocalStorage)
+
+Funktionen:
+- Anzeige von Cookie-Bannern nach Erstbesuch
+- Einwilligung oder Ablehnung nach Kategorien (Marketing, Analyse etc.)
+- Speichern Ihrer Auswahl lokal auf Ihrem Gerät
+- Keine Übertragung an Dritte
+- Optional: Integration von Google Consent Mode & IAB TCF
+
+Rechtsgrundlage:
+Art. 6 Abs. 1 lit. c DSGVO, Art. 6 Abs. 1 lit. a DSGVO (sofern aktiv erteilt)
+
+Gespeicherte Daten:
+- Einwilligungsstatus
+- Zeitstempel
+- Geräteinformationen (Browsertyp, OS)
+- Optional: Spracheinstellung, Region
+
+===================================================================================
+4. Eingesetzte Funktionen & Module (je nach Freischaltung)
+-----------------------------------------------------------------------------------
+[✓] PrivacyCore – Cookie-Auswahl, Speicherung & Opt-In/Out-Logik  
+[✓] DesignFit – Farbliches & sprachliches CI-Matching  
+[ ] SEOBoost – Suchmaschinenoptimierung durch strukturierte Daten  
+[ ] TrackingControl – DSGVO-konforme Einbindung externer Dienste (z. B. GA4)  
+[ ] MarketingOptin – Einwilligung zur Werbekommunikation (z. B. Newsletter)  
+[ ] AuditSafe – Lokales Einwilligungsprotokoll & Reports  
+[ ] Multilanguage – Anzeige der Banner in der jeweiligen Browsersprache  
+[ ] PerformanceShield – Schutz vor Drittanbieter-Autoloads
+
+➤ Bitte aktivieren Sie nur die Module, die für Ihre Webseite technisch und juristisch verwendet werden dürfen.
+
+===================================================================================
+5. Widerruf und Verwaltung der Einwilligung
+-----------------------------------------------------------------------------------
+Sie können Ihre Einwilligung jederzeit über folgenden Weg widerrufen:
+
+1. Klick auf „Cookie-Einstellungen ändern“ (z. B. im Footer verlinkt)
+2. Aufruf des Cookie-Banners erneut durch Seitenaufruf im Inkognito-Modus
+3. Löschen der Cookies und LocalStorage-Daten in Ihrem Browser
+
+Ein erneuter Consent-Dialog erscheint automatisch beim nächsten Besuch.
+
+===================================================================================
+6. Datenweitergabe an Dritte
+-----------------------------------------------------------------------------------
+Sofern Sie der Nutzung zustimmungspflichtiger Dienste (z. B. Google Analytics,
+Facebook Pixel, YouTube) zustimmen, werden ggf. personenbezogene Daten an Drittstaaten
+übertragen. Es gelten dann die Datenschutzrichtlinien der jeweiligen Anbieter.
+
+Die Einbindung erfolgt DSGVO-konform ausschließlich nach vorheriger Einwilligung.
+
+===================================================================================
+7. Weitere Hinweise & Kontaktdaten
+-----------------------------------------------------------------------------------
+Bei Fragen oder zur Geltendmachung Ihrer Rechte (z. B. Auskunft, Löschung) wenden Sie
+sich bitte an:
+
+Datenschutzkontakt:   datenschutz@ihre-domain.de
+
+Vollständige Datenschutzerklärung:  
+https://www.ihre-domain.de/datenschutz
+
+===================================================================================
+         ⚠️ Diese Vorlage darf nur mit gültiger RSE-Lizenz-ID verwendet werden.
+         Jede Weitergabe, Anpassung oder Reproduktion bedarf unserer Zustimmung.
+===================================================================================

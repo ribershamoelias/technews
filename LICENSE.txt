@@ -1,0 +1,76 @@
+
+        .----------------.  .----------------.  .----------------. 
+        | .--------------. || .--------------. || .--------------. |
+        | |  _______     | || |    _______   | || |  _________   | |
+        | | |_   __ \    | || |   /  ___  |  | || | |_   ___  |  | |
+        | |   | |__| |   | || |  |  (__ \_|  | || |   | |_  \_|  | |
+        | |   |  __ /    | || |   '.___`-.   | || |   |  _|  _   | |
+        | |  _| |  \ \_  | || |  |`\____) |  | || |  _| |___/ |  | |
+        | | |____| |___| | || |  |_______.'  | || | |_________|  | |
+        | |              | || |              | || |              | |
+        | '--------------' || '--------------' || '--------------' |
+         '----------------'  '----------------'  '----------------' 
+ 
+
+        RSE PrivacySuite – Individuelle Lizenzvereinbarung
+───────────────────────────────────────────────────────────────────────────────
+ Lizenz-ID       : RSE-X4M7-K92P-20250705-C1F4
+ Lizenztyp       : Einzellizenz (nicht übertragbar)
+ Ausgestellt am  : 05.07.2025
+ Domain          : www.musterfirma.de
+ Projektname     : DSGVO & SEO Optimierung Website
+
+ Kunde           : Muster GmbH
+ Ansprechpartner : Max Mustermann
+ Adresse         : Musterstraße 1, 12345 Musterstadt, Deutschland
+
+ Lizenzgeber     : RSE-Systems | Trier, Deutschland
+                  support@rse-systems.com | www.rse-systems.com
+
+───────────────────────────────────────────────────────────────────────────────
+ Aktivierte Module:
+ [X] PrivacyCore       – DSGVO-konformes Cookie-Banner mit Consent-Logik
+ [X] SEOBoost          – Strukturierte Daten (Schema.org, JSON-LD), Meta-Tags
+ [ ] TrackingControl   – Consent-gesteuertes Tracking (GA4, Meta, Matomo etc.)
+ [X] DesignFit         – CI-basierte Banneranpassung
+ [X] LegalPlus         – Datenschutzerklärungsintegration
+ [ ] PerformanceShield – Lazy Load für Third-Party-Tools
+ [ ] MultiLang         – Mehrsprachigkeit
+ [ ] MarketingOptin    – Zustimmung für Newsletter & externe Tools
+ [X] AuditSafe         – Lokale Einwilligungsprotokollierung
+ [X] QuickScan         – Analyse von Cookies und externen Ressourcen
+
+───────────────────────────────────────────────────────────────────────────────
+ Lizenzbedingungen:
+ • Nutzung ist ausschließlich für oben genannte Domain erlaubt.
+ • Der Code wurde individuell eingebunden und darf nicht verändert werden ohne Zustimmung, da dieser Eigentum von RSE-Systems ist.
+ • Die Lizenz-ID dient der technischen und rechtlichen Verifizierung.
+ • Wartung, Änderungen und Erweiterungen sind optional buchbar.
+ • Die Lizenz ist unbefristet (wenn nicht anders angegeben im Vertrag), solange kein Lizenzbruch oder Missbrauch vorliegt.
+
+ Haftungsausschluss:
+ Die RSE PrivacySuite unterstützt technische DSGVO-Konformität, ersetzt jedoch keine rechtliche Prüfung durch einen Juristen. Die Verantwortung für Inhalte und rechtliche Korrektheit verbleibt beim Websitebetreiber.
+
+ Support:
+ • Basissupport bis 6 Monate ab Ausstellungsdatum
+ • Erweiterbar durch Wartungsvertrag
+
+───────────────────────────────────────────────────────────────────────────────
+ 🔐 REGELWERK ZUR RSE-LIZENZ-ID
+
+Die Lizenz-ID ist ein individueller, kryptografisch gesicherter Identifikator, der für jedes Projekt einmalig vergeben wird. Sie ist ein Sicherheitsmerkmal und Bestandteil des Integritätskonzepts von RSE PrivacySuite.
+
+  • Die Lizenz-ID darf NICHT öffentlich angezeigt oder geteilt werden.
+  • RSE-Systems wird Sie NIEMALS unaufgefordert per E-Mail, Telefon oder Messenger nach Ihrer Lizenz-ID fragen.
+  • Die Lizenz-ID darf ausschließlich im Quellcode durch autorisiertes RSE-Personal verwendet werden.
+  • Eine nachträgliche Änderung, Rekonstruktion oder Generierung ist NICHT zulässig.
+  • Im Fall von Missbrauch oder Verdacht auf unberechtigte Nutzung behält sich RSE-Systems das Recht vor, Module zu deaktivieren oder die Lizenz bis auf weiteres zu widerrufen.
+
+  Jeder Lizenzverstoß, insbesondere das Vervielfältigen oder öffentliche Veröffentlichen der ID, kann zum sofortigen Lizenzverlust führen.
+
+───────────────────────────────────────────────────────────────────────────────
+ ZERTIFIKAT:
+ Diese Lizenzdatei wurde individuell erstellt und enthält eine kryptografisch abgesicherte Lizenz-ID mit Prüflogik zur internen Verifikation. Sie ist für die Domain www.musterfirma.de eindeutig und unveränderlich.
+
+───────────────────────────────────────────────────────────────────────────────
+ © 2025 RSE-Systems – Alle Rechte vorbehalten

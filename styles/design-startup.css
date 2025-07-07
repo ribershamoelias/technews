@@ -1,0 +1,30 @@
+/*
+  RSE-Systems | Branchen-Design CSS
+  ───────────────────────────────────────────────
+  📄 Datei        : design-startup.css
+  📁 Pfad         : /rse-privacysuite/styles/
+  🏷 Template-Typ : Startups / SaaS / Agenturen
+  🆔 Datei-ID     : RSE-DESIGN-STARTUP-20250705-V1
+
+  Beschreibung:
+  Modernes UI, kontraststarkes Design, passende Farben für Tech-Startups
+*/
+
+#rse-cookie-banner {
+  background-color: #1f2937;
+  color: #ffffff;
+}
+
+#rse-cookie-banner a {
+  color: #10b981;
+}
+
+#rse-cookie-banner button.accept {
+  background-color: #10b981;
+  color: white;
+}
+
+#rse-cookie-banner button.reject {
+  background-color: #f43f5e;
+  color: white;
+}

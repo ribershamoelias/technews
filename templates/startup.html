@@ -1,0 +1,116 @@
+<!--
+  RSE-Systems | Template-Metadatenblock
+  ─────────────────────────────────────────────────────────────────────────────
+  📄 Dateiname       : startup.html
+  📁 Verzeichnis     : /rse-privacysuite/templates/
+  🏷 Template-Typ    : Modern / Agentur / Startup
+  🆔 Datei-ID        : RSE-TPL-STARTUP-20250705-V1
+  🔓 Sichtbarkeit    : Öffentlich – geeignet für innovative Unternehmen
+
+  📌 Projekt          : NeoTech UG – Landingpage-Optimierung & DSGVO
+  🌐 Domain           : www.neotech.io
+  👤 Erstellt von     : RSE-Systems
+  📅 Erstellt am      : 05.07.2025
+  ✏️ Letzte Änderung  : 05.07.2025
+  🛠 Geändert durch   : RSE-Systems (DesignFit & Text)
+
+  🚦 Status           : Freigegeben (Projektphase MVP)
+  ✅ Freigabehinweis  : NeoTech via Slack #webteam (05.07.2025)
+
+  🔄 Version          : V1
+  📚 Letzte Änderung  : Erstversion, progressive Sprache & modernes Design
+
+  🧩 Aktivierte Module:
+     - PrivacyCore
+     - DesignFit (individuelle Schrift, Farben)
+     - SEOBoost (strukturierte Daten)
+
+  ⚙ Technische Hinweise:
+     - Modernes, klares UI – ideal für SaaS, Tech, Agentur
+     - Primär-Farben: #1f2937 (dunkelblau), #10b981 (grün)
+     - Optimiert für mobile, responsive-first
+     - Keine Abhängigkeiten
+
+  📬 Support-Hinweis:
+     support@rse-systems.com | Datei-ID bitte angeben: RSE-TPL-STARTUP-20250705-V1
+-->
+
+<!-- RSE Suite Loader -->
+<script src="/rse-privacysuite/core/rse-suite-loader.js"></script>
+
+<!-- MultiLanguage Modul -->
+<script src="/rse-privacysuite/modules/multilanguage.js"></script>
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="/rse-privacysuite/styles/banner.css">
+<link rel="stylesheet" href="/rse-privacysuite/styles/design-startup.css">
+
+
+<div id="rse-cookie-banner" style="position:fixed;bottom:0;width:100%;background:#1f2937;color:#fff;padding:20px;font-family:'Inter',sans-serif;font-size:15px;z-index:9999;">
+  <p style="margin:0 0 10px;">
+    🚀 Hey, wir verwenden Cookies für Analyse und dein bestes Erlebnis.  
+    <a href="/privacy" style="color:#10b981;text-decoration:underline;" target="_blank">Mehr erfahren</a>
+  </p>
+  <button onclick="rseAcceptCookies()" style="background:#10b981;color:white;padding:10px 16px;border:none;border-radius:6px;margin-right:10px;">Akzeptieren</button>
+  <button onclick="rseDeclineCookies()" style="background:#e57373;color:white;padding:10px 16px;border:none;border-radius:6px;">Ablehnen</button>
+</div>
+
+<script>
+  function rseAcceptCookies() {
+    localStorage.setItem('rse-consent', 'all');
+    document.getElementById('rse-cookie-banner').style.display = 'none';
+  }
+
+  function rseDeclineCookies() {
+    localStorage.setItem('rse-consent', 'essential');
+    document.getElementById('rse-cookie-banner').style.display = 'none';
+  }
+
+  window.onload = function () {
+    if (localStorage.getItem('rse-consent')) {
+      document.getElementById('rse-cookie-banner').style.display = 'none';
+    }
+  };
+</script>
+
+<!-- Opt-in Formular -->
+
+<form class="rse-optin-form" id="newsletter-form">
+  <input type="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
+  <label>
+    <input type="checkbox" name="rse_optin" required>
+    Ich willige ein, Informationen zu Produkten und Angeboten per E-Mail zu erhalten.
+  </label>
+  <button type="submit">Anmelden</button>
+</form>
+
+<!-- Example of embedding a YouTube video -->
+<iframe
+  data-rse-category="media"
+  data-src="https://www.youtube.com/embed/VIDEO_ID"
+  width="560"
+  height="315"
+  frameborder="0"
+  allowfullscreen
+></iframe>
+
+<!-- Design-Konfiguration -->
+<script>
+  window.rseDesignConfig = {
+    primaryColor: "#0a7cff",
+    buttonTextColor: "#ffffff",
+    fontFamily: "'Roboto', sans-serif",
+    borderRadius: "6px"
+  };
+</script>
+
+<!-- Region-Konfiguration -->
+<script>
+  // Legt die Region des Kundenprojekts fest:
+  window.rseRegion = "ch"; // Alternativen: "de", "eu", "us-ca"
+</script>
+
+<!-- QuickScan aktivieren -->
+<script>
+  window.rseEnableQuickScan = true;
+</script>

@@ -1,0 +1,117 @@
+<!--
+  RSE-Systems | Template-Metadatenblock
+  ─────────────────────────────────────────────────────────────────────────────
+  📄 Dateiname     : base.html
+  📁 Verzeichnis   : /rse-privacysuite/templates/
+  🏷 Template-Typ  : Basis-Template (Neutral, universell einsetzbar)
+  🆔 Datei-ID      : RSE-TPL-BASE-20250705-V1
+  🔓 Sichtbarkeit  : Öffentlich (verlinkbar und für Kunden einsehbar)
+
+  📌 Projekt        : Muster GmbH – Website DSGVO-Anpassung
+  🌐 Domain         : www.musterfirma.de
+  👤 Erstellt von   : RSE-Systems (riber@rse-systems.com)
+  📅 Erstellt am    : 05.07.2025
+  ✏️ Zuletzt geändert: 05.07.2025
+  🛠 Geändert durch : RSE-Systems
+
+  🚦 Status         : Freigegeben für Produktion
+  ✅ Freigegeben von: Datenschutzbeauftragter Kunde (via E-Mail am 05.07.2025)
+  🔄 Version        : V1
+  📚 Letzte Änderung: Initialversion, angepasstes neutrales Standard-Layout
+
+  🧩 Enthaltene Module:
+     - PrivacyCore (Consent-Logik, LocalStorage)
+     - DesignFit (Standard-Farben, keine individuellen Styles)
+
+  ⚙ Technische Hinweise:
+     - Responsive ab 320px Bildschirmbreite getestet
+     - Keine externen CSS/JS-Abhängigkeiten
+     - Kompatibel mit allen modernen Browsern (ab Chrome 90, Firefox 90)
+     - Erfordert Einbindung vor </body> im HTML-Dokument
+
+  📬 Support-Hinweis:
+     Bei Problemen mit Darstellung oder Logik wenden Sie sich an:
+     support@rse-systems.com mit Angabe der Datei-ID und Domain.
+
+  📌 Änderungsverlauf:
+     [05.07.2025] V1 – Erste produktive Fassung
+-->
+
+<!-- RSE Suite Loader -->
+<script src="/rse-privacysuite/core/rse-suite-loader.js"></script>
+
+
+<!-- MultiLanguage Modul -->
+<script src="/rse-privacysuite/modules/multilanguage.js"></script>
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="/rse-privacysuite/styles/banner.css">
+
+<div id="rse-cookie-banner" style="position:fixed;bottom:0;left:0;right:0;background:#fff;padding:20px;z-index:9999;box-shadow:0 -2px 5px rgba(0,0,0,0.2);font-family:sans-serif;">
+  <p>
+    Wir verwenden Cookies, um Ihre Nutzererfahrung zu verbessern. 
+    <a href="/datenschutz" target="_blank">Mehr erfahren</a>
+  </p>
+  <button onclick="rseAcceptCookies()">Alle akzeptieren</button>
+  <button onclick="rseDeclineCookies()">Nur notwendige</button>
+</div>
+
+<script>
+  function rseAcceptCookies() {
+    localStorage.setItem('rse-consent', 'all');
+    document.getElementById('rse-cookie-banner').style.display = 'none';
+  }
+
+  function rseDeclineCookies() {
+    localStorage.setItem('rse-consent', 'essential');
+    document.getElementById('rse-cookie-banner').style.display = 'none';
+  }
+
+  window.onload = function () {
+    if (localStorage.getItem('rse-consent')) {
+      document.getElementById('rse-cookie-banner').style.display = 'none';
+    }
+  };
+</script>
+
+<!-- Opt-in Formular -->
+
+<form class="rse-optin-form" id="newsletter-form">
+  <input type="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
+  <label>
+    <input type="checkbox" name="rse_optin" required>
+    Ich willige ein, Informationen zu Produkten und Angeboten per E-Mail zu erhalten.
+  </label>
+  <button type="submit">Anmelden</button>
+</form>
+
+<!-- Example of embedding a YouTube video -->
+<iframe
+  data-rse-category="media"
+  data-src="https://www.youtube.com/embed/VIDEO_ID"
+  width="560"
+  height="315"
+  frameborder="0"
+  allowfullscreen
+></iframe>
+
+<!-- Design-Konfiguration -->
+<script>
+  window.rseDesignConfig = {
+    primaryColor: "#0a7cff",
+    buttonTextColor: "#ffffff",
+    fontFamily: "'Roboto', sans-serif",
+    borderRadius: "6px"
+  };
+</script>
+
+<!-- Region-Konfiguration -->
+<script>
+  // Legt die Region des Kundenprojekts fest:
+  window.rseRegion = "ch"; // Alternativen: "de", "eu", "us-ca"
+</script>
+
+<!-- QuickScan aktivieren -->
+<script>
+  window.rseEnableQuickScan = true;
+</script>

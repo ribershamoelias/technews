@@ -1,0 +1,77 @@
+<!--
+  RSE-Systems | Konfigurationsdatei – Interne Modulübersicht
+  ───────────────────────────────────────────────────────────────
+  📄 Datei       : config.html
+  📁 Verzeichnis : /rse-privacysuite/config/
+  🆔 Datei-ID    : RSE-CONFIG-ACME-20250705-V1
+  🧾 Kunden-ID   : rse_client_id = "acme-xyz"
+  🌐 Domain      : www.acme-website.de
+  📅 Erstellt am : 05.07.2025
+  ✏️ Version     : V1.0
+  🔒 Sichtbarkeit: INTERN – Nur RSE-Systems & Projektbeteiligte
+-->
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>RSE-Konfigurationsübersicht – ACME</title>
+  <style>
+    body { font-family: Inter, sans-serif; padding: 2rem; background: #f9f9f9; color: #222; }
+    h1 { font-size: 1.8rem; }
+    .section { margin-top: 2rem; padding: 1rem; background: #fff; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.05); }
+    .label { font-weight: bold; display: inline-block; width: 200px; }
+    .active { color: green; font-weight: bold; }
+    .inactive { color: #888; text-decoration: line-through; }
+  </style>
+</head>
+<body>
+
+  <h1>🔧 RSE PrivacySuite Konfiguration</h1>
+  <p>Diese Datei dokumentiert die aktivierten Module, Styles und technischen Einstellungen für das Projekt <strong>acme-xyz</strong>.</p>
+
+  <div class="section">
+    <h2>📌 Allgemeine Informationen</h2>
+    <p><span class="label">Lizenz-ID:</span> rse_client_id = "<strong>acme-xyz</strong>"</p>
+    <p><span class="label">Zugehörige Domain:</span> www.acme-website.de</p>
+    <p><span class="label">Design-Template:</span> design-startup.css</p>
+    <p><span class="label">Letzte Änderung:</span> 05.07.2025</p>
+  </div>
+
+  <div class="section">
+    <h2>🧩 Aktivierte Module</h2>
+    <ul>
+      <li class="active">✓ PrivacyCore</li>
+      <li class="active">✓ DesignFit</li>
+      <li class="inactive">✗ SEOBoost</li>
+      <li class="inactive">✗ TrackingControl</li>
+      <li class="active">✓ Multilanguage</li>
+      <li class="inactive">✗ AuditSafe</li>
+      <li class="inactive">✗ PerformanceShield</li>
+      <li class="inactive">✗ MarketingOptin</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🔍 Zusätzliche Hinweise</h2>
+    <p>Die Consent-Konfiguration wurde vollständig manuell durch das RSE-Team eingefügt. Änderungen am Quellcode dürfen nur durch autorisierte Mitarbeitende vorgenommen werden.</p>
+    <p>Alle Texte wurden am 05.07.2025 DSGVO-konform abgestimmt und lokalisiert (Sprache: DE, EN).</p>
+  </div>
+
+  <div class="section">
+    <h2>📁 Verknüpfte Dateien</h2>
+    <ul>
+      <li><code>/templates/startup.html</code></li>
+      <li><code>/styles/banner.css</code></li>
+      <li><code>/styles/design-startup.css</code></li>
+      <li><code>/docs/datenschutzmuster.txt</code></li>
+    </ul>
+  </div>
+
+  <footer style="margin-top:4rem;font-size:0.8rem;color:#aaa;">
+    © 2025 RSE-Systems – Interne Konfigurationsübersicht für Projekt „acme-xyz“.  
+    Bei Änderungen bitte neue Version mit neuer Datei-ID anlegen.
+  </footer>
+
+</body>
+</html>

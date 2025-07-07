@@ -1,0 +1,116 @@
+<!--
+  RSE-Systems | Template-Metadatenblock
+  ─────────────────────────────────────────────────────────────────────────────
+  📄 Dateiname     : technik.html
+  📁 Verzeichnis   : /rse-privacysuite/templates/
+  🏷 Template-Typ  : Formell/Technisch
+  🆔 Datei-ID      : RSE-TPL-TECH-20250705-V1
+  🔓 Sichtbarkeit  : Öffentlich – empfohlen für technische Branchen
+
+  📌 Projekt        : ACME Tech AG – Supportseite DSGVO-konform
+  🌐 Domain         : support.acmetech.com
+  👤 Erstellt von   : RSE-Systems / Datenschutz-Team
+  📅 Erstellt am    : 05.07.2025
+  ✏️ Letzte Änderung: 05.07.2025
+  🛠 Geändert durch : RSE-Systems
+
+  🚦 Status         : In Produktion
+  ✅ Freigegeben von: ACME-DSB / RSE Qualitätssicherung
+
+  🔄 Version        : V1
+  📚 Letzte Änderung: Statische Texte eingefügt, standardisierte Links
+
+  🧩 Module enthalten:
+     - PrivacyCore
+     - LegalPlus (Verlinkung zur Datenschutzerklärung)
+
+  ⚙ Technische Hinweise:
+     - Saubere Trennung von HTML und JS
+     - Lesefreundlicher Stil (Arial, hoher Kontrast)
+     - Mobil optimiert (flexible Breite, padding)
+
+  📬 Support-Hinweis:
+     support@rse-systems.com | Bitte Datei-ID mitliefern
+
+  📌 Änderungsverlauf:
+     [05.07.2025] V1 – Erstellung & Integration
+-->
+
+<!-- RSE Suite Loader -->
+<script src="/rse-privacysuite/core/rse-suite-loader.js"></script>
+
+<!-- MultiLanguage Modul -->
+<script src="/rse-privacysuite/modules/multilanguage.js"></script>
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="/rse-privacysuite/styles/banner.css">
+<link rel="stylesheet" href="/rse-privacysuite/styles/design-technik.css">
+
+<div id="rse-cookie-banner" style="position:fixed;bottom:0;width:100%;background:#f9f9f9;border-top:1px solid #ccc;padding:20px;font-family:Arial,sans-serif;font-size:14px;z-index:9999;">
+  <p>
+    Diese Website verwendet Cookies zur technischen Funktionalität sowie zur anonymisierten Statistik. 
+    Weitere Informationen finden Sie in unserer <a href="/datenschutz" target="_blank">Datenschutzerklärung</a>.
+  </p>
+  <button onclick="rseAcceptCookies()">Einverstanden</button>
+  <button onclick="rseDeclineCookies()">Ablehnen</button>
+</div>
+
+<script>
+  function rseAcceptCookies() {
+    localStorage.setItem('rse-consent', 'all');
+    document.getElementById('rse-cookie-banner').style.display = 'none';
+  }
+
+  function rseDeclineCookies() {
+    localStorage.setItem('rse-consent', 'essential');
+    document.getElementById('rse-cookie-banner').style.display = 'none';
+  }
+
+  window.onload = function () {
+    if (localStorage.getItem('rse-consent')) {
+      document.getElementById('rse-cookie-banner').style.display = 'none';
+    }
+  };
+</script>
+
+<!-- Opt-in Formular -->
+
+<form class="rse-optin-form" id="newsletter-form">
+  <input type="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
+  <label>
+    <input type="checkbox" name="rse_optin" required>
+    Ich willige ein, Informationen zu Produkten und Angeboten per E-Mail zu erhalten.
+  </label>
+  <button type="submit">Anmelden</button>
+</form>
+
+<!-- Example of embedding a YouTube video -->
+<iframe
+  data-rse-category="media"
+  data-src="https://www.youtube.com/embed/VIDEO_ID"
+  width="560"
+  height="315"
+  frameborder="0"
+  allowfullscreen
+></iframe>
+
+<!-- Design-Konfiguration -->
+<script>
+  window.rseDesignConfig = {
+    primaryColor: "#0a7cff",
+    buttonTextColor: "#ffffff",
+    fontFamily: "'Roboto', sans-serif",
+    borderRadius: "6px"
+  };
+</script>
+
+<!-- Region-Konfiguration -->
+<script>
+  // Legt die Region des Kundenprojekts fest:
+  window.rseRegion = "ch"; // Alternativen: "de", "eu", "us-ca"
+</script>
+
+<!-- QuickScan aktivieren -->
+<script>
+  window.rseEnableQuickScan = true;
+</script>

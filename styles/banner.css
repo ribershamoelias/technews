@@ -1,0 +1,94 @@
+/*
+  RSE-Systems | Zentrales CSS-Stylesheet für Cookie-Banner
+  ─────────────────────────────────────────────────────────────────────────────
+  📄 Dateiname        : banner.css
+  📁 Verzeichnis      : /rse-privacysuite/styles/
+  🆔 Datei-ID         : RSE-CSS-BANNER-20250705-V1
+  📅 Erstellt am      : 05.07.2025
+  ✏️ Letzte Änderung  : 05.07.2025
+  🛠 Bearbeitet von   : RSE-Systems (riber@rse-systems.com)
+  🔓 Sichtbarkeit     : öffentlich – zur externen Verwendung gedacht
+
+  📌 Zweck:
+     Dieses Stylesheet dient der einheitlichen Gestaltung aller DSGVO-Cookie-Banner,
+     die über die RSE PrivacySuite auf Kundenseiten eingebunden werden. Es unterstützt
+     Modularisierung (z. B. DesignFit), ist responsive und barrierearm gestaltet.
+
+  ⚙ Technische Hinweise:
+     - Wird direkt in Templates via <link> eingebunden
+     - Keine externen Frameworks erforderlich (kein Tailwind, Bootstrap etc.)
+     - Kompatibel mit allen modernen Browsern (ab Chrome 90, Safari 14, Firefox 90)
+
+  📬 Support-Kontakt:
+     support@rse-systems.com | Bitte Datei-ID mitliefern
+
+  📌 Änderungsverlauf:
+     [05.07.2025] V1 – Basis-Design erstellt für Consent-UI neutral
+*/
+
+
+/* ─────────────────────────────────────────────
+   🔹 Basis-Layout für den Cookie-Banner-Container
+───────────────────────────────────────────── */
+#rse-cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background-color: #ffffff;
+  color: #333333;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 15px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ─────────────────────────────────────────────
+   🔹 Links im Banner
+───────────────────────────────────────────── */
+#rse-cookie-banner a {
+  color: #333;
+  text-decoration: underline;
+}
+
+/* ─────────────────────────────────────────────
+   🔹 Buttons (Akzeptieren / Ablehnen)
+───────────────────────────────────────────── */
+#rse-cookie-banner button {
+  margin-right: 10px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Haupt-Button: Akzeptieren */
+#rse-cookie-banner button.accept {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Neben-Button: Ablehnen */
+#rse-cookie-banner button.reject {
+  background-color: #e57373;
+  color: white;
+}
+
+/* ─────────────────────────────────────────────
+   🔹 Responsive Verhalten (kleine Geräte)
+───────────────────────────────────────────── */
+@media screen and (max-width: 480px) {
+  #rse-cookie-banner {
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  #rse-cookie-banner button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
